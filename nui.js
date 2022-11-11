@@ -2,14 +2,14 @@ import axios from "axios"
 
 const NUI = {
     /**
-     * Listen to key events.
+     * Listen to message events.
      * @param {String} type - Listen to NUI Event with type:
      * @param {Function} func - The callback function when the type gets called.
      */
     OnNuiEvent(type, func) {
         window.addEventListener('message', (e) => {
             if (e.data.type == type) {
-                func(e.data)
+                func(e.data.payload)
             }
         })
     },
