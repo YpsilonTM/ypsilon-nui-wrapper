@@ -66,3 +66,16 @@ import { post } from './nui.js'
 // for the await put in an async function or use in an app that supports toplevel await.
 const inv = await post('yp-testscript', 'getinventory', payload = {citizenid = 'ABC12345'})
 ```
+
+#LUA Client Side
+
+## How to setup the NUIMessage
+
+```lua
+SendNUIMessage({
+    type = "show",
+    payload = true
+  })
+```
+
+Setup you NUIMessage like this.
